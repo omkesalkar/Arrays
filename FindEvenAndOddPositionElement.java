@@ -1,50 +1,38 @@
 package Arrays_Logical_Questions.Day_02;
 
-import java.util.Scanner;
-
 public class FindEvenAndOddPositionElement 
 {
-	public static int[] createArray()
+	public static void evenOddPositionIndex(int[] a)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter array size: ");
-		int size = sc.nextInt();
-		int[] arr = new int[size];
-		
-		System.out.print("Enter "+ size +" elements in array: ");
-		for(int i=0; i<arr.length; i++)
+		System.out.println("\nElements present in even/odd indexes.");
+		for(int i=0; i<a.length; i++)
 		{
-			arr[i] = sc.nextInt();
-			System.out.println("Array element at index "+ i +" : "+ arr[i]);
-		}
-		sc.close();
-		return arr;
-	}
-	
-	public static void findEvenOddPositionIndex(int[] arr)
-	{
-		int evenIndex = arr[0], oddIndex = arr[0];
-		
-		for(int i=0; i<arr.length; i++)
-		{
-			evenIndex = arr[0];
-			oddIndex = arr[0];
-			
 			if(i % 2 == 0)
 			{
-				evenIndex++;
-			}
-			else if(i % 2 !=0 )
+				System.out.println(a[i] +" is present at even index "+ i);
+			} 
+			else if(i % 2 != 0)
 			{
-				oddIndex++;
+				System.out.println(a[i] +" is present at Odd index "+ i );
+			}
+			else
+			{
+				System.err.println("No Index found.");
 			}
 		}
-		System.out.println("Even index elements: "+ evenIndex);
-		System.out.println("Odd index elements: "+ oddIndex);
 	}
+	
 	public static void main(String[] args)
 	{
-		int[] arr1 = createArray();
-		findEvenOddPositionIndex(arr1);
+		int[] arr = {1, 4, 3, 5, 2, 6, 5};
+		
+		System.out.print("Created Array is: ");
+		for(int i=0; i<arr.length; i++)
+		{
+			System.out.print(arr[i] +" ");
+		}
+		
+		evenOddPositionIndex(arr);
+		
 	}
 }
