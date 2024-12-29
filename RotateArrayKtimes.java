@@ -1,4 +1,4 @@
-package Arrays_Logical_Questions.Day_05_MergingArray;
+package Arrays_Logical_Questions.Day_06_Shifting;
 //K time left rotation / anti clockwise rotation.
 
 public class RotateArrayKtimes
